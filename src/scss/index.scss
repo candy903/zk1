@@ -1,0 +1,28 @@
+@import '_minix.scss';
+@import 'common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(16px);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-between);
+    padding: pxTorem(5px) pxTorem(15px);
+    @include sizing;
+}
+
+.con {
+    @include flex;
+}
+
+.swiper-slide {
+    @include box_flex;
+    width: 100%;
+    height: pxTorem(200px);
+}
