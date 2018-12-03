@@ -2,7 +2,7 @@
  * @Author: 胡新玉 
  * @Date: 2018-12-03 08:55:34 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-12-03 09:39:17
+ * @Last Modified time: 2018-12-03 09:56:03
  */
 
 var gulp = require('gulp');
@@ -31,7 +31,7 @@ gulp.task('watch', function() {
 
 //起服务
 gulp.task('devserver', function() {
-    return gulp.src('src')
+    return gulp.src('build')
         .pipe(server({
             port: 9090,
             open: true,
@@ -43,7 +43,7 @@ gulp.task('devserver', function() {
                     return
                 }
                 pathname = pathname === '/' ? 'index.html' : pathname;
-                res.end(fs.readFileSync(path.join(__dirname, 'src', pathname)))
+                res.end(fs.readFileSync(path.join(__dirname, 'build', pathname)))
             }
         }))
 })
