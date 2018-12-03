@@ -19,10 +19,27 @@ header {
 
 .con {
     @include flex;
-}
-
-.swiper-slide {
-    @include box_flex;
-    width: 100%;
-    height: pxTorem(200px);
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+            @include box_flex;
+            width: 100%;
+            height: pxTorem(200px);
+        }
+    }
+    .list {
+        width: 100%;
+        dl {
+            width: 100%;
+            dt {
+                width: 100%;
+                height: pxTorem(50px);
+            }
+            dd {
+                width: 100%;
+                height: pxTorem(20px);
+            }
+        }
+    }
 }

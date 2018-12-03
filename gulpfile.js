@@ -2,7 +2,7 @@
  * @Author: 胡新玉 
  * @Date: 2018-12-03 08:55:34 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-12-03 09:56:03
+ * @Last Modified time: 2018-12-03 10:07:30
  */
 
 var gulp = require('gulp');
@@ -37,7 +37,7 @@ gulp.task('devserver', function() {
             open: true,
             middleware: function(req, res, next) {
                 var pathname = url.parse(req.url).pathname;
-                console.log(pathname)
+                // console.log(pathname)
                 if (pathname === '/favicon.ico') {
                     res.end('')
                     return
